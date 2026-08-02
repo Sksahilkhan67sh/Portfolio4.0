@@ -129,13 +129,13 @@ export const projects = [
     image: "portfolio",
   },
   {
-    title: "LandConnect",
+    title: "Land",
     type: "Self Project",
     description: "Land Connect is a modern land listing and property discovery platform that connects landowners, buyers, and investors through a seamless digital experience. The platform enables users to browse, search, and filter land listings based on location, size, price, and land type while providing detailed property information. Built with a responsive, user-friendly interface, Land Connect simplifies property discovery, improves transparency, and streamlines the process of finding the right investment opportunity.",
     tech: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Google Maps API"],
     github: "https://github.com/Sksahilkhan67sh/your-own-platform",
     demo: "https://your-own-platform-web.vercel.app/",
-    image: "LandConnect",
+    image: "Land",
   },
 ];
 
