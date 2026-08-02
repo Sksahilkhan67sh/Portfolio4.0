@@ -6,14 +6,14 @@ import webhookImg from "../assets/img/webhook.png";
 import streamvaultImg from "../assets/img/streamvault.png";
 import phishguardImg from "../assets/img/phishguard.png";
 import portfolioImg from "../assets/img/portfolio.png";
-import musicalwebImg from "../assets/img/Land.png";
+import musicalwebImg from "../assets/img/musicalweb.png";
 
 const IMAGES = {
   webhook: webhookImg,
   streamvault: streamvaultImg,
   phishguard: phishguardImg,
   portfolio: portfolioImg,
-  Land: LandImg,
+  musicalweb: musicalwebImg,
 };
 
 export default function Projects() {
