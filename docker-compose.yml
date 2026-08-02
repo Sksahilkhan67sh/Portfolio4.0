@@ -1,0 +1,48 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    env_file:
+      - backend/.env
+    volumes:
+      - backend_db:/app/database
+      - backend_logs:/app/logs
+    expose:
+      - "8000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        VITE_API_URL: ""
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  # Optional production database. Point backend/.env DATABASE_URL at this
+  # service (postgresql+psycopg2://portfolio:portfolio@db:5432/portfolio)
+  # and uncomment to use Postgres instead of the default SQLite file.
+  # db:
+  #   image: postgres:16-alpine
+  #   environment:
+  #     POSTGRES_USER: portfolio
+  #     POSTGRES_PASSWORD: portfolio
+  #     POSTGRES_DB: portfolio
+  #   volumes:
+  #     - pg_data:/var/lib/postgresql/data
+  #   restart: unless-stopped
+
+volumes:
+  backend_db:
+  backend_logs:
+  # pg_data:
