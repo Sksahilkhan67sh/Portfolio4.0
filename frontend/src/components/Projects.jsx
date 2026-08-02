@@ -13,6 +13,7 @@ const IMAGES = {
   streamvault: streamvaultImg,
   phishguard: phishguardImg,
   portfolio: portfolioImg,
+  musicalweb: musicalwebImg,
 };
 
 export default function Projects() {
