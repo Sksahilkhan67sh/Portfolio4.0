@@ -13,7 +13,7 @@ const IMAGES = {
   streamvault: streamvaultImg,
   phishguard: phishguardImg,
   portfolio: portfolioImg,
-  LandConnect: LandConnectImg,
+  LandConnect: LandImg,
 };
 
 export default function Projects() {
