@@ -22,7 +22,7 @@ export const skills = [
   {
     category: "Languages",
     icon: "code",
-    skills: ["Java", "Python", "JavaScript", "SQL", "HTML", "CSS"],
+    skills: ["Python", "JavaScript", "SQL", "HTML", "CSS"],
   },
   {
     category: "Frameworks & Tools",
@@ -32,7 +32,6 @@ export const skills = [
       "Node.js",
       "Express.js",
       "Django",
-      "Spring Data JPA",
       "Flask",
       "EJS",
       "NPM",
